@@ -7,6 +7,12 @@ gem 'shopify_app'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+gem "bootstrap_form", ">= 4.2.0"
+
+# Gemfile
+gem 'httparty'
 gem 'dotenv-rails'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'

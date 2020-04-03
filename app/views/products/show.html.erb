@@ -1,0 +1,42 @@
+<%= render partial: 'shopify_bar' %>
+
+<h2  id="product-title">
+  <div class="float-left">
+    <span> <%= @product.title %> </span>
+    <img src="<%= @product.image.src %>" class="img-thumbnail small-img-thumbnail" />
+  </div>
+
+  <div class="float-right">
+    <%= link_to 'New Metafield', new_metafield_path(owner_id: @product.id, owner_class: 'Product'), class: 'btn btn-outline-primary'%>
+  </div>
+</h2>
+
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Namespace</th>
+    <th scope="col">Key</th>
+    <th scope="col">Type</th>
+    <th scope="col">Value</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @metafields.each_with_index do |metafield, index| %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= metafield.namespace %></td>
+        <td><%= metafield.key %></td>
+        <td><%= metafield.value_type %></td>
+        <td><%= metafield.value %></td>
+        <td>
+          <%= link_to "Edit", edit_metafield_path(metafield.id), class: "btn btn-link" %>
+
+          <%= link_to "Delete", metafield_path(metafield.id), method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-link" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

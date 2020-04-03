@@ -1,0 +1,42 @@
+//HEADER
+.navbar .nav-item {
+    margin-right: 12px;
+    transition: all 0.2s;
+    border: 1px solid #CCCCCC;
+  }
+  
+  .navbar .nav-link:hover, .navbar .nav-link:focus, .navbar .nav-link.active {
+    border-color: #30A54A;
+    color: #30A54A;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 6px;
+  }
+  
+  .navbar {
+    border-bottom: 1px solid #DADADA;
+  }
+  
+  #page-wrapper {
+    padding-top: 80px;
+  }
+  
+  body {
+    padding: 0px 15px;
+    min-width: 800px;
+    margin: 0px;
+  }
+  
+  // PRODUCT
+  .small-img-thumbnail {
+    max-width: 60px;
+  }
+  
+  #product-title {
+    margin-left: 2px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    float: left;
+  }
